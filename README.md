@@ -1,39 +1,42 @@
 # LLM-Powered Research Assistant for Creative Industries
 
-This is a custom GPT-4-powered assistant that helps professionals in media, arts, broadcast, and culture explore how Artificial Intelligence can inspire real-world innovation.
+A custom GPT-4-powered assistant that helps professionals in **media, arts, broadcast, and culture** explore how Artificial Intelligence can inspire real-world innovation.
 
 **Built by Joseph McCartney – Created as part of my application for an AI apprenticeship**
+
 
 ---
 
 ## What It Does
 
-Users enter a topic (e.g. "AI in museums", "independent cinema", "immersive digital theatre") and the assistant:
+Enter a topic or question (e.g. `"AI in museums"`, `"independent cinema"`, `"immersive digital theatre"`), and this assistant will:
 
-1. Summarizes relevant trends and AI innovations in that space  
-2. Suggests one or two creative project ideas tailored for organisations like museums, studios, or festivals  
-3. Outputs an easy-to-read insight and idea summary
+1. Summarize **relevant trends and AI innovations** in that creative field  
+2. Suggest **2–3 unique project ideas** tailored for arts organisations, museums, media studios, or festivals  
+3. Output a **clear, creative, and professional insight summary**
 
-This tool blends creative thinking, AI prompt engineering, and practical application for the industries Peak Signal works with.
+This tool blends **creative strategy, prompt engineering**, and **real-world applicability** — aligned with the work Peak Signal delivers.
 
 ---
 
 ## Example Use Case
 
-**Topic entered:** `AI in classical music performance`  
+**Input:**  
+`AI in classical music performance`  
 
-**Output:**
-- Summary of how orchestras are using generative music, real-time visualisation, and AI-enhanced audience experiences  
-- Creative idea: "Conductor Companion" – an AI assistant that adapts live music interpretation and engages audience members through mobile prompts
+**Output includes:**  
+- A short summary of trends (e.g. AI-assisted conducting, generative orchestration, audience interactivity)  
+- Creative idea: *"Conductor Companion"* – an AI assistant that helps adapt musical phrasing in real time and sends interactive prompts to audience phones during the show.
 
 ---
 
 ## Tech Stack
 
-- Python  
-- OpenAI GPT-4  
-- Streamlit  
-- Prompt templating  
+- `Python`  
+- `OpenAI GPT-4`  
+- `Streamlit`  
+- `.env` for secure API key handling  
+- Custom LLM prompt templates
 
 ---
 
@@ -41,54 +44,81 @@ This tool blends creative thinking, AI prompt engineering, and practical applica
 
 ```
 llm-creative-research-assistant/
-├── app.py               # Main Streamlit app
+├── app.py               # Streamlit app that generates results from user input
 ├── requirements.txt     # Python dependencies
 ├── prompts/
-│   └── idea_prompt.txt  # Custom LLM prompt template
-└── README.md            # This file
+│   └── idea_prompt.txt  # GPT-4 prompt template with topic placeholder
+├── .env.example         # Shows how to structure your OpenAI key
+└── README.md            # You're reading it
 ```
 
 ---
 
-## How to Run It Locally
+## How to Run This Locally
 
-1. Clone this repository:
+### 1. Clone this repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/llm-creative-research-assistant.git
+git clone https://github.com/Joseph-McCartney-AI/llm-creative-research-assistant.git
 cd llm-creative-research-assistant
 ```
 
-2. Install dependencies:
+### 2. (Optional) Create a virtual environment:
+```bash
+python -m venv env
+source env/bin/activate      # macOS/Linux
+env\Scripts\activate         # Windows
+```
+
+### 3. Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the app:
+### 4. Add your OpenAI API key:
+Create a file named `.env` in the root directory, and paste:
+
+```
+OPENAI_API_KEY=your_openai_api_key_here
+```
+
+You can get your API key at https://platform.openai.com/account/api-keys
+
+### 5. Launch the app:
 ```bash
 streamlit run app.py
 ```
 
-You’ll need an OpenAI API key. Add this line at the top of `app.py`:
-```python
-openai.api_key = "your_openai_api_key_here"
-```
+This will open the assistant in your browser at `http://localhost:8501`.
+
+---
+
+## What Happens Under the Hood
+
+- The app reads your input topic
+- It fills that topic into a well-crafted GPT-4 prompt (from `prompts/idea_prompt.txt`)
+- Sends it to OpenAI using your key
+- Returns a structured response with insights + original project ideas
 
 ---
 
 ## Why I Built This
 
-This project is designed to address a real-world challenge:  
-**How can creative organisations explore and apply AI in ways that are meaningful and useful?**
+This project directly addresses the question:  
+**“How can creative organisations explore and apply AI in ways that are meaningful, practical, and inspiring?”**
 
 It demonstrates:
-- My ability to apply AI tools to solve real problems  
-- Understanding of GPT-based systems  
-- Clear thinking and initiative  
-- A focus on real-world use cases in creative sectors  
+- Strategic use of GPT-4 for real-world problem solving  
+- Fluency in AI prompt design  
+- Initiative and clarity of thought  
+- Alignment with Peak Signal’s work in creative innovation  
 
 ---
 
 ## Contact
 
-Joseph McCartney  
-📧 mccartneyjoseph580@gmail.com
+**Joseph McCartney**  
+📧 mccartneyjoseph580@gmail.com  
+🔗 GitHub: [Joseph-McCartney-AI](https://github.com/Joseph-McCartney-AI)
+
+---
+
