@@ -2,7 +2,7 @@
 
 This is a custom GPT-4-powered assistant that helps professionals in media, arts, broadcast, and culture explore how Artificial Intelligence can inspire real-world innovation.
 
-**Built by Joseph McCartney – Applicant for the Peak Signal AI Apprenticeship 2025**
+**Built by Joseph McCartney – Created as part of my application for an AI apprenticeship**
 
 ---
 
