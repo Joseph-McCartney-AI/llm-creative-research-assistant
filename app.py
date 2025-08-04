@@ -7,30 +7,34 @@ from dotenv import load_dotenv
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-st.set_page_config(page_title="LLM Creative Research Assistant", layout="centered")
-st.title("🎨 LLM Creative Research Assistant")
-st.write("Explore creative AI ideas tailored for arts, media, and cultural innovation.")
+st.title("LLM Creative Research Assistant")
 
-topic = st.text_input("Enter a creative topic or research question:")
+st.markdown("""
+Discover how artificial intelligence can unlock bold, practical, and imaginative opportunities across the creative industries.
+
+**Try entering a topic like:**  
+- How museums can use AI to reach new audiences  
+- The role of generative AI in independent film  
+- Immersive theatre and real-time AI interaction  
+""")
+
+topic = st.text_input("Enter your creative topic or research question:")
 submit = st.button("Generate Insights")
 
 if submit and topic:
+    with open("prompts/idea_prompt.txt", "r") as file:
+        prompt_template = file.read()
+
+    full_prompt = prompt_template.replace("<<TOPIC>>", topic)
+
     try:
-        with open("prompts/idea_prompt.txt", "r", encoding="utf-8") as file:
-            prompt_template = file.read()
-
-        full_prompt = prompt_template.replace("<<TOPIC>>", topic.strip())
-
         response = openai.ChatCompletion.create(
             model="gpt-4",
             messages=[{"role": "user", "content": full_prompt}],
-            max_tokens=700,
-            temperature=0.8
+            max_tokens=700
         )
-
         result = response.choices[0].message.content
-        st.markdown("### ✨ AI-Powered Insight and Idea")
-        st.markdown(result)
-
+        st.markdown("### ✨ AI-Powered Insight and Project Ideas")
+        st.write(result)
     except Exception as e:
-        st.error(f"❌ An error occurred: {str(e)}")
+        st.error(f"❌ An error occurred:\n\n{str(e)}")
