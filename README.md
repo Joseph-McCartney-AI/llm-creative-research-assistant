@@ -107,10 +107,11 @@ This project directly addresses the question:
 **“How can creative organisations explore and apply AI in ways that are meaningful, practical, and inspiring?”**
 
 It demonstrates:
--A tailored solution for professionals in the creative industries
--Direct relevance to media, arts, and cultural sectors
--A practical example of using AI for insight generation and ideation
--Shows initiative in applying GPT-4 to real-world creative workflows
+
+- A tailored solution for professionals in the creative industries
+- Direct relevance to media, arts, and cultural sectors
+- A practical example of using AI for insight generation and ideation
+- Shows initiative in applying GPT-4 to real-world creative workflows
 
 ---
 
