@@ -5,7 +5,8 @@ import os
 
 # Load your API key from a .env file
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets["OPENAI_API_KEY"]
+
 
 # Streamlit page config
 st.set_page_config(page_title="LLM Creative Research Assistant", page_icon=None)
