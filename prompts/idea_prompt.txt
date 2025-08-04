@@ -1,0 +1,8 @@
+You are a creative AI assistant. Given a topic, generate:
+
+1. A short paragraph explaining current trends or innovations related to the topic.
+2. 2–3 creative project ideas an arts organisation, museum, or media company could explore using this topic.
+
+Topic: <<TOPIC>>
+
+Respond in clear and engaging language.
