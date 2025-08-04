@@ -52,3 +52,4 @@ if submit_button and user_prompt:
 
         except Exception as e:
             st.error(f"An error occurred: {e}")
+
